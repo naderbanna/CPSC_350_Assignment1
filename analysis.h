@@ -1,15 +1,21 @@
-#include <iostream>
+//header file analysis.h
+#include <string>
 
-using namepspace std;
-
-class fileProcessor{
+class analysis{
   public:
-    fileProcessor();
-    string openFile(string input);
-    ~fileProcessor();
+    analysis(); //default
+    analysis(std::string inputFile); //overloaded
+    ~analysis();  //deconstructer
 
-    //void open();
-    void close();
-    void writeOutput();
+    int getSum();
+    double getMean();
+    double getVar();
+    double getSd();
 
-}
+    std::string iFile;
+    int sum;
+    double mean;
+
+    // string relProb();
+    // string relprobBi();
+};

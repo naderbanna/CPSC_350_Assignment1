@@ -1,0 +1,2 @@
+The Sum of the length of the DNA strings is: 32
+The Mean of the length of the DNA strings is: 6.4
