@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <cmath>
 #include "analysis.h"
 
 using namespace std;
@@ -34,15 +35,11 @@ int analysis::getSum(){
   }
   dnaStream.close();
 
-  //write to output file
-  ofstream result;
-  result.open("output.txt");
-  result << "The Sum of the length of the DNA strings is: " << sum << endl;
-  result.close();
   return sum;
 }
 
 double analysis::getMean(){
+  mean = 0;
   ifstream dnaStream;
   dnaStream.open(iFile);
 
@@ -53,10 +50,39 @@ double analysis::getMean(){
   ;
   mean = getSum()/lineCount;
 
-  ofstream result;
-  result.open("output.txt", std::ios_base::app);
-  result << "The Mean of the length of the DNA strings is: " << mean << endl;
-  result.close();
   return mean;
+
+}
+
+double analysis::getVar(){
+  var = 0;
+  ifstream dnaStream;
+  dnaStream.open(iFile);
+
+  string line = "";
+  double temp = 0;
+  int lineCount;
+
+  for (lineCount = 0; getline(dnaStream, line); ++lineCount)
+    temp += pow((line.length()-1)-getMean(),2);
+
+  var = temp/lineCount;
+  return var;
+}
+
+double analysis::getSd(){
+  sd = sqrt(getVar());
+  return sd;
+}
+
+void analysis::writeFile(){
+  ofstream result;
+  result.open("output.txt");
+  result << "The Sum of the length of the DNA strings is: " << getSum() << endl;
+  result << "The Mean of the length of the DNA strings is: " << getMean() << endl;
+  result << "The Variance of the length of the DNA strings is: " << getVar() << endl;
+  result << "The Standard Deviation of the length of the DNA strings is: " << getSd() << endl;
+
+  result.close();
 
 }

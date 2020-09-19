@@ -11,10 +11,16 @@ class analysis{
     double getMean();
     double getVar();
     double getSd();
+    double getRelProb();
+    double getBiProb();
+    void writeFile();
 
     std::string iFile;
     int sum;
     double mean;
+    double var;
+    double sd;
+  
 
     // string relProb();
     // string relprobBi();
