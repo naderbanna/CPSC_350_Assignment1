@@ -1,4 +1,5 @@
-The Sum of the length of the DNA strings is: 438
-The Mean of the length of the DNA strings is: 5.91892
-The Variance of the length of the DNA strings is: 2.83126
-The Standard Deviation of the length of the DNA strings is: 1.68264
+The Sum of the length of the DNA strings is: 32
+The Mean of the length of the DNA strings is: 6.4
+The Variance of the length of the DNA strings is: 0.64
+The Standard Deviation of the length of the DNA strings is: 0.8
+AACCTTGG ACATAG CACTCG GAGCGT TATCTG 

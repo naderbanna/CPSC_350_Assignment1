@@ -7,7 +7,7 @@ using namespace std;
 
 int main(int argc, char** argv){
 
-  analysis *test = new analysis("testInput.txt");
+  analysis *test = new analysis();
   test->writeFile();
 
 
