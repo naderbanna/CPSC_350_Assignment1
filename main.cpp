@@ -1,13 +1,15 @@
 #include <iostream>
 #include <fstream>
-#include "analysis.h"
-//#include "analysis.cpp"
-//#include "analysis.h";
+#include "Analysis.h"
+//#include "Analysis.cpp"
+//#include "Analysis.h";
 using namespace std;
 
 int main(int argc, char** argv){
 
-  analysis *test = new analysis();
+  //Analysis *test = new Analysis();
+  Analysis *test = new Analysis("assign1-sampleInput.txt");
+
   test->writeFile();
 
 
