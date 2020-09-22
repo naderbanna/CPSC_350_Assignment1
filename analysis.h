@@ -15,12 +15,17 @@ class Analysis{
     double getRelProb();
     double getBiProb();
     void writeFile();
+    void generateDNA();
   private:
     std::string iFile;
     std::string data;
     std::string dataFull;
     int dnaStrands;
     int sum;
+    float d;
+    float a;
+    float b;
+    float c;
     double mean;
     double var;
     double sd;
@@ -44,11 +49,4 @@ class Analysis{
     double bprobGC;
     double bprobGT;
     double bprobGG;
-
-
-
-
-
-    // string relProb();
-    // string relprobBi();
 };
